@@ -38,7 +38,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2</title>
+    <title>Log in</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
@@ -47,14 +47,14 @@ $conn->close();
       
         <form id="loginForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" >
             <input type="email" id="email" name="email" placeholder="Email">
-            <span  id="email-error">
+            <span class="error-message" id="email-error">
                 <?php
                     echo $emailError;
                 ?>
             </span>
             
             <input type="password" id="password" name="password" placeholder="Password">
-            <span  id="password-error">
+            <span class="error-message" id="password-error">
                 <?php
                     echo $passwordError;
                 ?>

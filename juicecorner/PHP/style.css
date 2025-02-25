@@ -22,21 +22,22 @@
     display: flex;
     justify-content: space-evenly;
     margin: 150PX;
+
     
   }
   .box-container .box1:hover{
     transform: scale(1.25);
 }
 
-  .box-container .box1{
+  .box-container .box1 {
     box-shadow: 5px 5px 15px  #A7D477 ;
     width:300px;
     height: 450PX;
     color:  #FF748B;
     text-align: center;
-    background-color:#E4F1AC;
+    background: color #f7f7f7;;
      font-family: 'Times New Roman', Times, serif;
-    transition: transform 4s;
+    transition: transform 1s;
 
   }
 
@@ -73,9 +74,9 @@
     height:450PX;
     color:  #FF748B ;
     text-align: center;
-    background-color:#E4F1AC ;
+    background-color:#f7f7f7 ;
      font-family: 'Times New Roman', Times, serif;
-    transition: transform 4s;
+    transition: transform 1s;
 
   }
   .box-container .box3{
@@ -84,9 +85,9 @@
     height: 450PX;
     color:  #FF748B;
     text-align: center;
-    background-color:#E4F1AC;
+    background-color:#f7f7f7;
      font-family: 'Times New Roman', Times, serif;
-    transition: transform 4s;
+    transition: transform 1s;
 
   }
    .box-container .box4:hover{
@@ -99,9 +100,9 @@
     height: 450PX;
     color:  #FF748B;
     text-align: center;
-    background-color:#E4F1AC;
+    background-color:#f7f7f7;
      font-family: 'Times New Roman', Times, serif;
-    transition: transform 4s;
+    transition: transform 1s;
 
   }
 

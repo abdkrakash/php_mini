@@ -20,9 +20,8 @@
                 <ul>
                     <li><a href="../home_page/imdex.html">Home</a></li>
                     <li><a href="#">Users</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Statistics</a></li>
+                    <li><a href="../PHP/index.html">Categories</a></li>
+                    <li><a href="">Products</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,7 +29,7 @@
         <div class="main-content">
             <header>
                 <h2>Dashboard</h2>
-                <button class="toggle-btn">☰</button> 
+                <p class="toggle-btn">
             </header>
 
             <div class="cards">
