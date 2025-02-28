@@ -1,68 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="../Sign Up/Sign Up.css" />
-  </head>
-  <body>
-
-
-
-<nav class="navbar">
-    <div class="logo">
-      <img src="../Pic/logo.png" alt="Logo" height="40">
-    </div>
-
-    
-    <div class="links">
-      <a href="../home_page/imdex.html" class="link"><i class="fas fa-home"></i> Home</a> 
-      <a href="../cartt/cart.html" class="link"><i class="fas fa-shopping-cart"></i> Cart</a>
-      <a href="../PHP/index.html" class="link"><i class="fas fa-bars"></i> Menu</a> 
-      <a href="../Sign Up/Sign Up.html" class="link"><i class="fas fa-sign-in-alt"></i> Sign up</a>
-
-    </div>
-  </nav>
-
-
-    <div class="form-container">
-   
-      <h2>Sign Up</h2>
-      <form id="signUpForm" action="./2.html">
-        <input type="text" id="first-name" placeholder="First Name" />
-        <span class="error-message" id="first-name-error"></span>
-
-        <input type="text" id="last-name" placeholder="Last Name" />
-        <span class="error-message" id="last-name-error"></span>
-
-        <input type="text" id="email" placeholder="Email" />
-        <span class="error-message" id="email-error"></span>
-
-        <input type="password" id="password" placeholder="Password" />
-        <span class="error-message" id="password-error"></span>
-
-        <input
-          type="password"
-          id="confirm-password"
-          placeholder="Confirm Password"
-        />
-        <span class="error-message" id="confirm-password-error"></span>
-
-        <button type="submit">Sign Up 
-        </button>
-      
-      </form>
-      <div class="signup">I don't have an account yet
-        <a href="../login/login.php">I already have an account</a>
-            </div>
-    </div>
-   
- 
-  </body>
-</html> -->
 
 <?php
 include '../db_config.php';
@@ -112,17 +48,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sss", $fullName, $email, $password);
-
-            if ($stmt->execute()) {
-                echo "<script>alert('Registration Successful!');</script>";
-            } else {
-                echo "<script>alert('Error: Registration Failed!');</script>";
-            }
+          $stmt->execute();
+          header('Location: login.php');
+            
         }
         $stmt->close();
     }
 }
+
 $conn->close();
+
 ?>
 
 
@@ -142,13 +77,13 @@ $conn->close();
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="../Pic/logo.png" alt="Logo" height="40">
+            <img src="../Pic/logo-removebg-preview.png" alt="Logo" height="40">
         </div>
         <div class="links">
-            <a href="../home_page/imdex.html" class="link"><i class="fas fa-home"></i> Home</a> 
-            <a href="../cartt/cart.html" class="link"><i class="fas fa-shopping-cart"></i> Cart</a>
-            <a href="../PHP/index.html" class="link"><i class="fas fa-bars"></i> Menu</a> 
-            <a href="../SignUp/SignUp.html" class="link"><i class="fas fa-sign-in-alt"></i> Sign up</a>
+            <a href="../home_page/index.php" class="link"><i class="fas fa-home"></i> Home</a> 
+            <a href="../cartt/cart.php" class="link"><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a href="../PHP/index.php" class="link"><i class="fas fa-bars"></i> Menu</a> 
+            <a href="../SignUp/SignUp.php" class="link"><i class="fas fa-sign-in-alt"></i> Sign up</a>
         </div>
     </nav>
 
@@ -170,12 +105,14 @@ $conn->close();
             <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password">
             <span class="error-message" id="confirm-password-error"><?php echo $confirmPasswordError; ?></span>
 
-            <button type="submit">Sign Up</button>
+            <button> <a style="text-decoration: none ; color:white"  type="submit" href="../home_page/index.php" > Sign Up</a> </button>
+
         </form>
-        <div class="signup">
-            I don't have an account yet
-            <a href="../login/login.php">I already have an account</a>
+        <div class="signup"> 
+        <b>I don't have an account yet
+            <a style="text-decoration: none ;  color:#F72C5B  " href="../login/login.php">I already have an account</a>
         </div>
+       
     </div>
 
     <script>

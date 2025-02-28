@@ -59,12 +59,14 @@ $conn->close();
                     echo $passwordError;
                 ?>
             </span>
-        
-            <button type="submit">Login</button>
+
+           
+
+           <button> <a  style="text-decoration: none ; color:white " type="submit" href="../home_page/index.php"> Login</a> </button>
         </form>
 
-        <div class="signup">I don't have an account yet
-            <a href="../Sign Up/Sign Up.html">Register a new account</a>
+        <div class="signup"><b>I don't have an account yet
+            <a  style="text-decoration: none ;  color:#F72C5B  "    href="../SignUp/SignUp.php"><b>Register a new account</a>
         </div>
         
        

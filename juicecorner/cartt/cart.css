@@ -233,7 +233,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--dark-red);
+    background-color:white;
     padding: 10px 40px;
     position: fixed; 
     top: 0;
@@ -254,7 +254,7 @@ body {
 }
 
 .link {
-    color: white;
+    color:var(--dark-red);
     text-decoration: none;
     font-size: 18px;
     display: flex;
